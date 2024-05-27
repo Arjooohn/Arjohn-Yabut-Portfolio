@@ -157,17 +157,3 @@ function downloadCV() {
   link.click();
   document.body.removeChild(link);
 }
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Generate a five digit number for the contact_number variable
-  this.contact_number.value = Math.random() * 100000 | 0;
-  emailjs.sendForm('service_ck00e8o', 'template_z0b8lgi', this)
-    .then(function() {
-      alert('Your message has been sent successfully!');
-      document.getElementById("contact-form").reset();
-    }, function(error) {
-      alert('Oops... ' + JSON.stringify(error));
-    });
-});
-

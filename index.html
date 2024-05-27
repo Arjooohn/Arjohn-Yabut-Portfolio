@@ -1334,7 +1334,7 @@
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-          </form>
+          </form>          
         </section>
       </article>      
     </div>
@@ -1343,6 +1343,22 @@
 
   <!--custom js link-->
   <script src="./assets/js/script.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+  
+      // Send the form using EmailJS
+      emailjs.sendForm('service_ck00e8o', 'template_z0b8lgi', this)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your message has been sent successfully!');
+          document.getElementById("contact-form").reset();
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Oops... ' + JSON.stringify(error));
+        });
+    });
+  </script>
 
   <!--ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
