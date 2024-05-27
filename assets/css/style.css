@@ -1096,7 +1096,7 @@ main {
   width: 100%;
   border-radius: 16px;
   margin-bottom: 30px;
-  border: 1px solid var(--jet);
+  border: 1px solid var(--vegas-gold);
   overflow: hidden;
 }
 
@@ -1841,13 +1841,50 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .gray-icon {
     filter: grayscale(100%);
-}
+  }
 
 
-  /**
-	 * RESUME
-	 */
+  /*RESUME*/
 
   .timeline-text { max-width: 700px; }
+}
 
+header {
+  display: flex;
+  align-items: center;
+}
+
+.h2.article-title {
+  display: flex;
+  align-items: center;
+}
+
+.download-btn {
+  border: 2px solid var(--vegas-gold);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.download-btn svg {
+  width: 15px;
+  height: 15px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover svg {
+  fill: white;
+}
+
+.download-btn:hover {
+  background-color: var(--vegas-gold);
 }

@@ -147,3 +147,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// donwload button (Resume)
+function downloadCV() {
+  const link = document.createElement('a');
+  link.href = 'assets/CV.pdf';
+  link.download = 'CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
